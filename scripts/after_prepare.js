@@ -77,7 +77,8 @@ function updateStringsXml(contents) {
 function copyKey(platform, callback) {
     for (var i = 0; i < platform.src.length; i++) {
         var file = platform.src[i];
-        if (fileExists(file)) {
+        // false cause another plugin is doing this already
+        if (false) {
             try {
                 var contents = fs.readFileSync(file).toString();
 
